@@ -4,19 +4,31 @@
   "description": "",
   "main": "index.js",
   "source": "src/index.html",
+  "homepage": "",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SahaidakVladyslav/goit-js-hw-08"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vladyslav Sahaidak mamba@gmail.com",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+  },
   "devDependencies": {
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4",
     "parcel": "^2.9.3"
   },
   "dependencies": {
+    "modern-normalize": "^1.1.0",
     "@vimeo/player": "^2.20.1",
     "lodash.throttle": "^4.1.1",
     "simplelightbox": "^2.14.2"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
