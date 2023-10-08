@@ -1,4 +1,4 @@
-!function(){function e(e){return e&&e.__esModule?e.default:e}var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},n={},o="Expected a function",r=0/0,i=/^\s+|\s+$/g,a=/^[-+]0x[0-9a-f]+$/i,f=/^0b[01]+$/i,u=/^0o[0-7]+$/i,l=parseInt,c="object"==typeof t&&t&&t.Object===Object&&t,s="object"==typeof self&&self&&self.Object===Object&&self,d=c||s||Function("return this")(),m=Object.prototype.toString,v=Math.max,g=Math.min,y=function(){return d.Date.now()};/**
+!function(){function e(e){return e&&e.__esModule?e.default:e}var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},n={},o="Expected a function",r=0/0,i=/^\s+|\s+$/g,a=/^[-+]0x[0-9a-f]+$/i,l=/^0b[01]+$/i,f=/^0o[0-7]+$/i,u=parseInt,c="object"==typeof t&&t&&t.Object===Object&&t,s="object"==typeof self&&self&&self.Object===Object&&self,d=c||s||Function("return this")(),m=Object.prototype.toString,v=Math.max,g=Math.min,y=function(){return d.Date.now()};/**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
  * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -44,7 +44,7 @@
  *
  * _.toNumber('3.2');
  * // => 3.2
- */function b(e){if("number"==typeof e)return e;if("symbol"==typeof(t=e)||t&&"object"==typeof t&&"[object Symbol]"==m.call(t))return r;if(p(e)){var t,n="function"==typeof e.valueOf?e.valueOf():e;e=p(n)?n+"":n}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(i,"");var o=f.test(e);return o||u.test(e)?l(e.slice(2),o?2:8):a.test(e)?r:+e}n=/**
+ */function b(e){if("number"==typeof e)return e;if("symbol"==typeof(t=e)||t&&"object"==typeof t&&"[object Symbol]"==m.call(t))return r;if(p(e)){var t,n="function"==typeof e.valueOf?e.valueOf():e;e=p(n)?n+"":n}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(i,"");var o=l.test(e);return o||f.test(e)?u(e.slice(2),o?2:8):a.test(e)?r:+e}n=/**
  * Creates a throttled function that only invokes `func` at most once per
  * every `wait` milliseconds. The throttled function comes with a `cancel`
  * method to cancel delayed `func` invocations and a `flush` method to
@@ -140,15 +140,15 @@
  *
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
- */function(e,t,n){var r,i,a,f,u,l,c=0,s=!1,d=!1,m=!0;if("function"!=typeof e)throw TypeError(o);function S(t){var n=r,o=i;return r=i=void 0,c=t,f=e.apply(o,n)}function j(e){var n=e-l,o=e-c;// Either this is the first call, activity has stopped and we're at the
+ */function(e,t,n){var r,i,a,l,f,u,c=0,s=!1,d=!1,m=!0;if("function"!=typeof e)throw TypeError(o);function S(t){var n=r,o=i;return r=i=void 0,c=t,l=e.apply(o,n)}function j(e){var n=e-u,o=e-c;// Either this is the first call, activity has stopped and we're at the
 // trailing edge, the system time has gone backwards and we're treating
 // it as the trailing edge, or we've hit the `maxWait` limit.
-return void 0===l||n>=t||n<0||d&&o>=a}function h(){var e,n,o,r=y();if(j(r))return O(r);// Restart the timer.
-u=setTimeout(h,(e=r-l,n=r-c,o=t-e,d?g(o,a-n):o))}function O(e){return(// Only invoke if we have `lastArgs` which means `func` has been
+return void 0===u||n>=t||n<0||d&&o>=a}function h(){var e,n,o,r=y();if(j(r))return O(r);// Restart the timer.
+f=setTimeout(h,(e=r-u,n=r-c,o=t-e,d?g(o,a-n):o))}function O(e){return(// Only invoke if we have `lastArgs` which means `func` has been
 // debounced at least once.
-(u=void 0,m&&r)?S(e):(r=i=void 0,f))}function T(){var e,n=y(),o=j(n);if(r=arguments,i=this,l=n,o){if(void 0===u)return(// Reset any `maxWait` timer.
-c=e=l,// Start the timer for the trailing edge.
-u=setTimeout(h,t),s?S(e):f);if(d)return(// Handle invocations in a tight loop.
-u=setTimeout(h,t),S(l))}return void 0===u&&(u=setTimeout(h,t)),f}return t=b(t)||0,p(n)&&(s=!!n.leading,a=(d="maxWait"in n)?v(b(n.maxWait)||0,t):a,m="trailing"in n?!!n.trailing:m),T.cancel=function(){void 0!==u&&clearTimeout(u),c=0,r=l=i=u=void 0},T.flush=function(){return void 0===u?f:O(y())},T}(e,t,{leading:r,maxWait:t,trailing:i})};let S=document.querySelector(".feedback-form"),j=Array.from(S)[0],h=Array.from(S)[1],O=Array.from(S)[2],T={email:"",message:""};function k(){localStorage.setItem("feedback-form-state",JSON.stringify(T))}let w=localStorage.getItem("feedback-form-state");j.addEventListener("input",/*@__PURE__*/e(n)(function(e){T.email=j.value,k()},500)),h.addEventListener("input",/*@__PURE__*/e(n)(function(e){T.message=h.value,k()},500)),O.addEventListener("click",e=>{e.preventDefault(),console.log(T),S.reset()}),localStorage.getItem("feedback-form-state")&&(console.log("yes, i m stiil alive"),j.value=(()=>{if(w)return JSON.parse(w).email})(),h.value=(()=>{if(w)return JSON.parse(w).message})()),document.querySelector("body").insertAdjacentHTML("afterend",'<button  style="margin: 30px;background-color: tomato;color:white;" class="reset">reset localStorage data</button>');let x=document.querySelector(".reset");x.addEventListener("click",e=>{localStorage.removeItem("feedback-form-state")})}();//# sourceMappingURL=03-feedback.dfdc718e.js.map
+(f=void 0,m&&r)?S(e):(r=i=void 0,l))}function T(){var e,n=y(),o=j(n);if(r=arguments,i=this,u=n,o){if(void 0===f)return(// Reset any `maxWait` timer.
+c=e=u,// Start the timer for the trailing edge.
+f=setTimeout(h,t),s?S(e):l);if(d)return(// Handle invocations in a tight loop.
+f=setTimeout(h,t),S(u))}return void 0===f&&(f=setTimeout(h,t)),l}return t=b(t)||0,p(n)&&(s=!!n.leading,a=(d="maxWait"in n)?v(b(n.maxWait)||0,t):a,m="trailing"in n?!!n.trailing:m),T.cancel=function(){void 0!==f&&clearTimeout(f),c=0,r=u=i=f=void 0},T.flush=function(){return void 0===f?l:O(y())},T}(e,t,{leading:r,maxWait:t,trailing:i})};let S=document.querySelector(".feedback-form"),j=Array.from(S)[0],h=Array.from(S)[1],O=Array.from(S)[2],T={email:"",message:""};function k(){localStorage.setItem("feedback-form-state",JSON.stringify(T))}let w=localStorage.getItem("feedback-form-state");j.addEventListener("input",/*@__PURE__*/e(n)(function(e){T.email=j.value,k()},500)),h.addEventListener("input",/*@__PURE__*/e(n)(function(e){T.message=h.value,k()},500)),O.addEventListener("click",e=>{e.preventDefault(),""!==j.value&&""!==h.value?(console.log(T),S.reset()):alert("Please fill in all fields")}),localStorage.getItem("feedback-form-state")&&(console.log("yes, i m stiil alive"),j.value=(()=>{if(w)return JSON.parse(w).email})(),h.value=(()=>{if(w)return JSON.parse(w).message})()),document.querySelector("body").insertAdjacentHTML("afterend",'<button  style="margin: 30px;background-color: tomato;color:white;" class="reset">reset localStorage data</button>');let x=document.querySelector(".reset");x.addEventListener("click",e=>{localStorage.removeItem("feedback-form-state")})}();//# sourceMappingURL=03-feedback.803c80c8.js.map
 
-//# sourceMappingURL=03-feedback.dfdc718e.js.map
+//# sourceMappingURL=03-feedback.803c80c8.js.map
