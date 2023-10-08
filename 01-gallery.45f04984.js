@@ -18,6 +18,7 @@ this.off(["close."+this.eventNamespace,"closed."+this.eventNamespace,"nextImageL
       <img loading="lazy" class="gallery__image" src="${t}" alt="${o}" />
    </a>
 </li>
-`).join("");c.insertAdjacentHTML("beforeend",h),new(o&&o.__esModule?o.default:o)(".gallery a",{captions:!0,captionDelay:250,fadeSpeed:250,captionSelector:"img",captionsData:"alt",captionPosition:"bottom"})}();//# sourceMappingURL=01-gallery.7bf0bdec.js.map
+`).join("");c.insertAdjacentHTML("beforeend",h),new(o&&o.__esModule?o.default:o)(".gallery a",{captions:!0,captionDelay:250,fadeSpeed:250,captionSelector:"img",captionsData:"alt",captionPosition:"bottom"});//  og jeg mange elsker banana
+}();//# sourceMappingURL=01-gallery.45f04984.js.map
 
-//# sourceMappingURL=01-gallery.7bf0bdec.js.map
+//# sourceMappingURL=01-gallery.45f04984.js.map

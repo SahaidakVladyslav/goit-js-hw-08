@@ -19,6 +19,7 @@ this.off(["close."+this.eventNamespace,"closed."+this.eventNamespace,"nextImageL
    </a>
 </li>
 `).join("");c.insertAdjacentHTML("beforeend",h),new(o&&o.__esModule?o.default:o)(".gallery a",{captions:!0,captionDelay:250,fadeSpeed:250,captionSelector:"img",captionsData:"alt",captionPosition:"bottom"});// jeg hedder Mamba
-//# sourceMappingURL=01-gallery.8080dcbd.js.map
+//  og jeg mange elsker banana
+//# sourceMappingURL=01-gallery.9d6408ad.js.map
 
-//# sourceMappingURL=01-gallery.8080dcbd.js.map
+//# sourceMappingURL=01-gallery.9d6408ad.js.map
