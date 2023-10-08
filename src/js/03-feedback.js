@@ -37,11 +37,16 @@ messageEl.addEventListener('input', throttle(function (event) {
 btnEl.addEventListener('click', (event) => {
     event.preventDefault();
     console.log(data);
-    formEl.reset();
+    if (emailEl.value !== "" && messageEl.value !== "") {
+        formEl.reset();
+    }
+    else {
+        alert('please write all information for us')
+    }
 });
 
 if (localStorage.getItem("feedback-form-state")) {
-    console.log('yes, i m stiil alive')
+    console.log('yes, files is saved in localStorage')
     emailEl.value = dataEmailValue();
     messageEl.value = dataMessageValue();
 } else {
@@ -49,8 +54,8 @@ if (localStorage.getItem("feedback-form-state")) {
 };
 
 
-document.querySelector('body').insertAdjacentHTML('afterend', `<button  style="margin: 30px;background-color: tomato;color:white;" class="reset">reset localStorage data</button>`)
-const resetEl = document.querySelector('.reset');
-resetEl.addEventListener('click', (event) => {
-    localStorage.removeItem("feedback-form-state")
-});
+// document.querySelector('body').insertAdjacentHTML('afterend', `<button  style="margin: 30px;background-color: tomato;color:white;" class="reset">reset localStorage data</button>`)
+// const resetEl = document.querySelector('.reset');
+// resetEl.addEventListener('click', (event) => {
+//     localStorage.removeItem("feedback-form-state")
+// });
