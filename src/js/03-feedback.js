@@ -36,8 +36,12 @@ messageEl.addEventListener('input', throttle(function (event) {
 
 btnEl.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log(data);
-    formEl.reset();
+    if (emailEl.value !== "" && messageEl.value !== "") {
+        console.log(data);
+        formEl.reset();
+    } else {
+        alert("Please fill in all fields")
+    }
 });
 
 if (localStorage.getItem("feedback-form-state")) {

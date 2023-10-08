@@ -26,5 +26,3 @@ let gallery = new SimpleLightbox('.gallery a', {
     captionPosition: 'bottom',
 });
 
-// jeg hedder Mamba
-//  og jeg mange elsker banana
