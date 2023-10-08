@@ -25,3 +25,5 @@ let gallery = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionPosition: 'bottom',
 });
+
+// jeg hedder Mamba
