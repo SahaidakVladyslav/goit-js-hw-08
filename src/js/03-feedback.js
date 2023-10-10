@@ -5,7 +5,7 @@ const emailEl = Array.from(formEl)[0];
 const messageEl = Array.from(formEl)[1];
 const btnEl = Array.from(formEl)[2];
 const keyLocalStorage = "feedback-form-state";
-const data = {
+let data = {
     email: '',
     message: ''
 };
@@ -49,9 +49,10 @@ formEl.addEventListener('input', throttle(function emailInput(event) {
 formEl.addEventListener('submit', (event) => {
     event.preventDefault();
     if (emailEl.value !== "" && messageEl.value !== "") {
-        console.log(dataStorage())
+        console.log(JSON.parse(dataStorage()))
         localStorage.removeItem("feedback-form-state")
         formEl.reset();
+        data = {};
     } else {
         alert("Please fill in all fields")
     }
