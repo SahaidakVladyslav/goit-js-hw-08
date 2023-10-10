@@ -140,15 +140,15 @@
  *
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
- */function(e,t,n){var r,o,a,f,l,u,s=0,c=!1,m=!1,d=!0;if("function"!=typeof e)throw TypeError(i);function j(t){var n=r,i=o;return r=o=void 0,s=t,f=e.apply(i,n)}function O(e){var n=e-u,i=e-s;// Either this is the first call, activity has stopped and we're at the
+ */function(e,t,n){var r,o,a,f,l,u,s=0,c=!1,m=!1,d=!0;if("function"!=typeof e)throw TypeError(i);function O(t){var n=r,i=o;return r=o=void 0,s=t,f=e.apply(i,n)}function j(e){var n=e-u,i=e-s;// Either this is the first call, activity has stopped and we're at the
 // trailing edge, the system time has gone backwards and we're treating
 // it as the trailing edge, or we've hit the `maxWait` limit.
-return void 0===u||n>=t||n<0||m&&i>=a}function h(){var e,n,i,r=p();if(O(r))return S(r);// Restart the timer.
-l=setTimeout(h,(e=r-u,n=r-s,i=t-e,m?g(i,a-n):i))}function S(e){return(// Only invoke if we have `lastArgs` which means `func` has been
+return void 0===u||n>=t||n<0||m&&i>=a}function S(){var e,n,i,r=p();if(j(r))return h(r);// Restart the timer.
+l=setTimeout(S,(e=r-u,n=r-s,i=t-e,m?g(i,a-n):i))}function h(e){return(// Only invoke if we have `lastArgs` which means `func` has been
 // debounced at least once.
-(l=void 0,d&&r)?j(e):(r=o=void 0,f))}function T(){var e,n=p(),i=O(n);if(r=arguments,o=this,u=n,i){if(void 0===l)return(// Reset any `maxWait` timer.
+(l=void 0,d&&r)?O(e):(r=o=void 0,f))}function T(){var e,n=p(),i=j(n);if(r=arguments,o=this,u=n,i){if(void 0===l)return(// Reset any `maxWait` timer.
 s=e=u,// Start the timer for the trailing edge.
-l=setTimeout(h,t),c?j(e):f);if(m)return(// Handle invocations in a tight loop.
-l=setTimeout(h,t),j(u))}return void 0===l&&(l=setTimeout(h,t)),f}return t=y(t)||0,b(n)&&(c=!!n.leading,a=(m="maxWait"in n)?v(y(n.maxWait)||0,t):a,d="trailing"in n?!!n.trailing:d),T.cancel=function(){void 0!==l&&clearTimeout(l),s=0,r=u=o=l=void 0},T.flush=function(){return void 0===l?f:S(p())},T}(e,t,{leading:r,maxWait:t,trailing:o})};let j=document.querySelector(".feedback-form"),O=Array.from(j)[0],h=Array.from(j)[1];Array.from(j)[2];let S="feedback-form-state",T={email:"",message:""},x=()=>localStorage.getItem(S);x()&&(O.value=(()=>{if(x())return JSON.parse(x()).email})(),T.email=O.value,h.value=(()=>{if(x())return JSON.parse(x()).message})(),T.message=h.value,console.log("В російських школах відключать дзвінки, щоб діти не чекали \xabпєрємєн\xbb")),j.addEventListener("input",((e=n)&&e.__esModule?e.default:e)(function(e){let t=e.target.name;"email"===t&&(T.email=e.target.value),"message"===t&&(T.message=e.target.value),localStorage.setItem(S,JSON.stringify(T))},500)),j.addEventListener("submit",e=>{e.preventDefault(),""!==O.value&&""!==h.value?(console.log(x()),localStorage.removeItem("feedback-form-state"),j.reset()):alert("Please fill in all fields")})}();//# sourceMappingURL=03-feedback.94879478.js.map
+l=setTimeout(S,t),c?O(e):f);if(m)return(// Handle invocations in a tight loop.
+l=setTimeout(S,t),O(u))}return void 0===l&&(l=setTimeout(S,t)),f}return t=y(t)||0,b(n)&&(c=!!n.leading,a=(m="maxWait"in n)?v(y(n.maxWait)||0,t):a,d="trailing"in n?!!n.trailing:d),T.cancel=function(){void 0!==l&&clearTimeout(l),s=0,r=u=o=l=void 0},T.flush=function(){return void 0===l?f:h(p())},T}(e,t,{leading:r,maxWait:t,trailing:o})};let O=document.querySelector(".feedback-form"),j=Array.from(O)[0],S=Array.from(O)[1];Array.from(O)[2];let h="feedback-form-state",T={email:"",message:""},x=()=>localStorage.getItem(h);x()&&(j.value=(()=>{if(x())return JSON.parse(x()).email})(),T.email=j.value,S.value=(()=>{if(x())return JSON.parse(x()).message})(),T.message=S.value,console.log("В російських школах відключать дзвінки, щоб діти не чекали \xabпєрємєн\xbb")),O.addEventListener("input",((e=n)&&e.__esModule?e.default:e)(function(e){let t=e.target.name;"email"===t&&(T.email=e.target.value),"message"===t&&(T.message=e.target.value),localStorage.setItem(h,JSON.stringify(T))},500)),O.addEventListener("submit",e=>{e.preventDefault(),""!==j.value&&""!==S.value?(console.log(JSON.parse(x())),localStorage.removeItem("feedback-form-state"),O.reset(),T={}):alert("Please fill in all fields")})}();//# sourceMappingURL=03-feedback.37c3a54a.js.map
 
-//# sourceMappingURL=03-feedback.94879478.js.map
+//# sourceMappingURL=03-feedback.37c3a54a.js.map
